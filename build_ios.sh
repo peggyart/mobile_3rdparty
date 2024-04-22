@@ -7,11 +7,12 @@ set -euxo pipefail
 mkdir -p ./opencv/build_ios
 cd ./opencv
 
-python3 platforms/ios/build_framework.py \
+python3 platforms/apple/build_xcframework.py \
   --contrib $HOME/src/github.com/opencv_contrib \
   --iphoneos_deployment_target "14.0" \
   --build_only_specified_archs \
   --iphoneos_archs "arm64"  \
+  --iphonesimulator_archs "arm64"  \
   --without gapi \
   --without java \
   --without js \
@@ -26,4 +27,4 @@ python3 platforms/ios/build_framework.py \
   --without videoio \
   --without world  \
   --disable-swift \
-  ./build_ios
+  --out ./build_ios
