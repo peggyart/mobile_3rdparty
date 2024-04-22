@@ -12,7 +12,7 @@ python3 platforms/apple/build_xcframework.py \
   --iphoneos_deployment_target "14.0" \
   --build_only_specified_archs \
   --iphoneos_archs "arm64"  \
-  --iphonesimulator_archs "arm64"  \
+  --iphonesimulator_archs "arm64,x86_64"  \
   --without gapi \
   --without java \
   --without js \
